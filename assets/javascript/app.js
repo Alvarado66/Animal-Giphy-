@@ -17,4 +17,16 @@ $(document).ready(function() {
 
         })
     }
+
+    function renderButton() {
+        $("#newGifs").empty();
+
+        for (let i = 0; i < memes.length; i++) {
+            
+            let 
+        }
+        
+    }
+
+    
 })
