@@ -1,4 +1,5 @@
-$(document).ready() ({
+$(document).ready(function() { 
+    
     // const key = "7w8Zsws3Lz5IuLUemcGQkgK8c0Riv4Hz";
     // // my API Key
     // let queryUrl = "https://api.giphy.com/v1/gifs/search?api_key=" + key + "&q=" + 
@@ -9,7 +10,7 @@ $(document).ready() ({
     // // will limit how many GIFs to show up after click
     // // let rating = [];
     // // the rating of each GIF
-    var cartoons = ["Bugs Bunny", "Woody", "Mickey Mouse",];
+    var cartoons = ["Bugs Bunny", "Woody", "Mickey Mouse"];
     // //  Basic Starter Buttons 
 
     function renderButtons() {
@@ -39,7 +40,7 @@ $(document).ready() ({
         event.preventDefault();
 
 
-        var cartoon = $("#add-cartoon").val().trim();
+        var cartoon = $("#cartoons-input").val().trim();
 
         cartoons.push(cartoon);
 
@@ -48,9 +49,9 @@ $(document).ready() ({
     });
 
     renderButtons();
+
+
 })
-
-
 
 
 
