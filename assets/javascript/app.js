@@ -15,32 +15,45 @@ $(document).ready(function() {
 
 
 
+
+
+
     function renderButtons() {
+
 
         $("#buttons-view").empty();
 
 
         for (var i = 0; i < cartoons.length; i++) {
 
-        var newChar = $("<button>");
 
-        newChar.addClass("cartoons");
+        var character = $("<button>");
 
-        newChar.attr("data-name", cartoons[i]);
+        character.addClass("newCartoon");
 
-        newChar.text(cartoons[i]);
+        character.attr("data-name", cartoons[i]);
 
-        $("#buttons-view").append(a);
+        character.text(cartoons[i]);
+
+        $("#buttons-view").append(cartoons);
         }
     }
 
-    $("#add-movie").on("click", function(event) {
+
+    $("#addCartoon").on("click", function(event) {
 
         event.preventDefault();
-        var newCartoon = $("#cartoons-input").val();
-        cartoons.push(newCartoon);
+
+
+        var newCharacter = $("#cartoons-input").val().trim();
+
+        cartoons.push(character);
+
+
         renderButtons();
     });
+
+    renderButtons();
 
 })
 

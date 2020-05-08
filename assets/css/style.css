@@ -1,14 +1,13 @@
-/* body { */
-    /* display: flex;
-    justify-content: center;
-} */
 
 #cartoons-form {
-    display: flex;
-    justify-content: center;
+    width: 350px;
+    border: 15px solid navy;
+    padding: 500px;
+    
 }
 
 #cartoons-input {
-    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
