@@ -1,5 +1,14 @@
-body {
+/* body { */
+    /* display: flex;
+    justify-content: center;
+} */
+
+#cartoons-form {
     display: flex;
     justify-content: center;
+}
+
+#cartoons-input {
+    align-items: center;
 }
 
