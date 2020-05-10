@@ -33,9 +33,6 @@ $(document).ready(function() {
       
        
         $.ajax({
-            // pas in two important properties that YOU NEED to make a requests.
-            // 1. url (this is your queryUrl string)
-            // 2. method (is it a get? a post? what.)
             url: queryUrl,
             method: "GET"
         }).then(function(response) {
@@ -52,26 +49,26 @@ $(document).ready(function() {
                 var cartoonImg = $("<img>");
 
                 cartoonImg.attr("src", results[i].images.original_still.url);
-
+                cartoonImg.addClass("cartoon")
+                cartoonImg.attr("data-still", results[i].images.original_still.url)
+                cartoonImg.attr("data-animate", results[i].images.original.url)
+                cartoonImg.attr("data-state", "still")
                 cartoonDiv.append(p);
                 cartoonDiv.append(cartoonImg);
-
+            }
                 $("#gifContainer").prepend(cartoonDiv);
 
+                $(".gif").on("click", function() {
 
-                var state = $(this).attr("data-state");
+                    var state = $(this).attr("data-state");
 
-                if (state === "still") {
-                  $(this).attr("src", $(this).attr("data-animate"));
-                  $(this).attr("data-state", "animate");
-                } else {
-                  $(this).attr("src", $(this).attr("data-still"));
-                  $(this).attr("data-state", "still");
-                }
-            }
-
-            
-            
+                    if (state === "still") {
+                      $(this).attr("src", $(this).attr("data-animate"));
+                      $(this).attr("data-state", "animate");
+                    } else {
+                      $(this).attr("src", $(this).attr("data-still"));
+                      $(this).attr("data-state", "still");
+                    }
 
         })
             
