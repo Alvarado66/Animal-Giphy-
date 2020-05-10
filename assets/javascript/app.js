@@ -6,27 +6,23 @@ $(document).ready(function() {
 
     function renderButtons() {
 
-
         $("#buttons-view").empty();
 
         for (var i = 0; i < cartoons.length; i++) {
 
-        var a = $("<button>");
-        a.addClass("cartoon");
-        a.attr("data-name", cartoons[i]);
-        a.text(cartoons[i]);
+            var a = $("<button>");
+            a.addClass("cartoonButton");
+            a.attr("data-name", cartoons[i]);
+            a.text(cartoons[i]);
 
-        $("#buttons-view").append(a);
+            $("#buttons-view").append(a);
         }
     }
 
-    $(document).on("click", ".cartoon", function() {
+    $(document).on("click", ".cartoonButton", function() {
 
-        $("#gifImage").empty();
         
-        
-       var cartoonButton = $(this)
-       var q = cartoonButton.attr( "data-name" );
+       var q = $(this).attr( "data-name" );
         // my API Key
        let queryUrl = "https://api.giphy.com/v1/gifs/search?api_key=" + key + "&q=" + q  + '&limit=10'; 
        
@@ -36,8 +32,8 @@ $(document).ready(function() {
             url: queryUrl,
             method: "GET"
         }).then(function(response) {
-            $("#gifImage").empty();
-
+            
+            $("#gifContainer").empty();
             let results = response.data
 
             for (var i = 0; i < results.length; i++) {
@@ -55,10 +51,12 @@ $(document).ready(function() {
                 cartoonImg.attr("data-state", "still")
                 cartoonDiv.append(p);
                 cartoonDiv.append(cartoonImg);
-            }
-                $("#gifContainer").prepend(cartoonDiv);
 
-                $(".gif").on("click", function() {
+                $("#gifContainer").prepend(cartoonDiv);
+            }
+                
+
+                $(".cartoon").on("click", function() {
 
                     var state = $(this).attr("data-state");
 
@@ -71,7 +69,7 @@ $(document).ready(function() {
                     }
 
         })
-            
+        }) 
     })
     
     $("#add-cartoon").on("click", function(event) {
@@ -85,7 +83,5 @@ $(document).ready(function() {
     renderButtons();
 
 
+
 })
-
-
-
