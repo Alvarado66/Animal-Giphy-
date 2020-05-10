@@ -27,8 +27,8 @@ $(document).ready(function() {
         
        var cartoonButton = $(this)
        var q = cartoonButton.attr( "data-name" );
-    //    // my API Key
-       let queryUrl = "https://api.giphy.com/v1/gifs/search?api_key=" + key + "&q=" + q;
+        // my API Key
+       let queryUrl = "https://api.giphy.com/v1/gifs/search?api_key=" + key + "&q=" + q  + '&limit=10'; 
        
       
        
@@ -40,24 +40,28 @@ $(document).ready(function() {
             method: "GET"
         }).then(function(response) {
             console.log(response)
-            // For loop over data array inside of response 
-            // each time it iterates cartoons create a new element and grab the relevant items and pin
-            // to the for loop block
-            // where to place image tag container or var or array 
-            // what happens when user clicks on another button does it clear or write over?
+
+            let results = response.data
+
+            for (var i = 0; i < results.length; i++) {
+
+                var cartoonDiv = $("<div>");
+
+                var p = $("<p>").text("Rating: " + results[i].rating);
+
+                var cartoonImg = $("<img>");
+
+                cartoonImg.attr("src", results[i].images.original_still.url);
+
+                cartoonDiv.append(p);
+                cartoonDiv.append(cartoonImg);
+
+                $("#gifContainer").prepend(cartoonDiv);
+            }
         })
-      
-    // // the queryURL to direct user for GIFs
+            
+    })
     
-    // // what "keyphrase" the user types
-    // // const limit = 10; 
-    // // will limit how many GIFs to show up after click
-    // // let rating = [];
-    // // the rating of each GIF
-       
-
-    } )
-
     
     $("#add-cartoon").on("click", function(event) {
 
