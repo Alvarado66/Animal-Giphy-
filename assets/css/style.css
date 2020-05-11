@@ -4,6 +4,14 @@ body {
     background-color: bisque;
 }
 
-#buttons-view {
-    
+.mainContainer {
+    background-color: cornflowerblue;
+    color: blanchedalmond;
+    width: auto;
+    border: 15px solid white;
+    padding: 50px;
+    margin: 10px;
 }
+
+
+

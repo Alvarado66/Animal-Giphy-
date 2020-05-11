@@ -33,7 +33,7 @@ $(document).ready(function() {
             method: "GET"
         }).then(function(response) {
             
-            $("#gifContainer").empty();
+            $(".gifContainer").empty();
             let results = response.data
 
             for (var i = 0; i < results.length; i++) {
@@ -52,7 +52,7 @@ $(document).ready(function() {
                 cartoonDiv.append(p);
                 cartoonDiv.append(cartoonImg);
 
-                $("#gifContainer").prepend(cartoonDiv);
+                $(".gifContainer").prepend(cartoonDiv);
             }
                 
 
