@@ -1,13 +1,9 @@
-/* 
-#cartoons-form {
-    width: 350px;
-    border: 15px solid navy;
-    padding: 500px;
-    
-}
-
-#cartoons-input {
+body {
     display: flex;
     justify-content: center;
-} */
+    background-color: bisque;
+}
 
+#buttons-view {
+    
+}
