@@ -1,6 +1,8 @@
 # FunGiphy-
 
-## Welcome to a simple and fun way to search for Gifs!
+## Show me the gifs! (link) https://alvarado66.github.io/FunGiphy/
+
+### Welcome to a simple and fun way to search for Gifs!
   This tool will allow you to search through an abundant 
   numbers of gifs. 
   
