@@ -19,4 +19,4 @@
   Hope you enjoy and thank you! 
 
 ### Screenshot 
-https://github.com/Alvarado66/FunGiphy/issues/1#issue-683881205
+<img width="680" alt="Screen Shot 2020-08-21 at 7 50 23 PM" src="https://user-images.githubusercontent.com/60458491/90943676-c24d8700-e3e8-11ea-91e5-eb05d527ac61.png">
