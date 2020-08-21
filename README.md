@@ -17,3 +17,6 @@
   You can search your own favorite cartoons and pull up some amazing gifs!
   
   Hope you enjoy and thank you! 
+
+### Screenshot 
+https://github.com/Alvarado66/FunGiphy/issues/1#issue-683881205
